@@ -24,17 +24,16 @@
 </head>
 <body class="bg-bg h-screen flex justify-center text-text font-sans ">
     <div id="container">
-        <h1 class="text-4xl font-semibold text-center mt-4 mb-8  ">To-Do List</h1>
+        <h1 class="text-4xl font-semibold text-center my-8 ">To-Do List</h1>
 
         <!-- INPUT FIELD -->
-        <div>
-        <input class="w-72 border rounded px-2 py-1 bg-[#e6a52e]/70 transition-all-2s-ease-in hover:bg-[#e6a52e] focus:text-amber-100 focus:outline-accent" type="text" id="taskInput" placeholder="Enter a new task">
+        <div class="flex ">
+        <input class="w-72 border rounded px-2 py-1 bg-[#e6a52e]/70 transition-all-2s-ease-in hover:bg-[#e6a52e] focus:text-white" type="text" id="taskInput" placeholder="Enter a new task">
         <button class="ml-3 text-accent/80 text-lg hover:text-accent" id="addTaskBtn">+ Add Task</button>
         </div>
 
         <!-- TASK CONTAINER -->
         <ol class="list-decimal my-8 text-lg space-y-2" id="taskContainer">
-                <!-- <h1 class="text-2xl text-center underline ">Tasks</h1> -->
         </ol>
     </div>
 </body>
