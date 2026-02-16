@@ -20,16 +20,26 @@ const addTask = () => {
         heading.className = 'text-2xl text-center underline'
         taskContainer.appendChild(heading)
     }
-    
+
+    const taskArray = [];
+
     // CREATES LIST ITEM AND DELETE BUTTON, APPENDS TO TASK CONTAINER, AND RESETS INPUT FIELD
     const listItem = document.createElement('li')
     const delBtn = document.createElement('button')
     delBtn.className = 'delBtn';
     listItem.textContent = taskInputValue
     delBtn.textContent = '❌'
+    const listItemObj = {
+        id: Date.now(),
+        task: taskInputValue,
+        completed: false
+    }
+    localStorage.setItem('tasks', JSON.stringify(listItemObj))
+    taskArray.push(listItemObj)
     listItem.appendChild(delBtn);
     taskContainer.appendChild(listItem);
-    document.getElementById('taskInput').value = ""
+    document.getElementById('taskInput').value = "";
+    console.log(listItemObj);
 }
 
 // EVENT LISTENERS
@@ -55,3 +65,5 @@ taskContainer.addEventListener('click', (e) => {
         heading.remove()
     }
 })
+
+console.log(Date.now());
