@@ -34,8 +34,12 @@ const addTask = () => {
         task: taskInputValue,
         completed: false
     }
+    
+    // STORES TASKS IN LOCAL STORAGE
     localStorage.setItem('tasks', JSON.stringify(listItemObj))
     taskArray.push(listItemObj)
+
+    // APPENDING ITEMS TO DOM
     listItem.appendChild(delBtn);
     taskContainer.appendChild(listItem);
     document.getElementById('taskInput').value = "";
