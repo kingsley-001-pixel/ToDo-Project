@@ -43,7 +43,6 @@ const addTask = () => {
     listItem.appendChild(delBtn);
     taskContainer.appendChild(listItem);
     document.getElementById('taskInput').value = "";
-    console.log(listItemObj);
 }
 
 // EVENT LISTENERS
@@ -69,5 +68,3 @@ taskContainer.addEventListener('click', (e) => {
         heading.remove()
     }
 })
-
-console.log(Date.now());
